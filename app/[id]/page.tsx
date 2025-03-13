@@ -6,14 +6,10 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GetUserResponse } from "@/user.interface";
 
-interface PageParams {
-  params: {
-    id: string;
-  };
-}
+type Params = Promise<{ id: string }>
 
-export default async function UserPage({ params }: PageParams) {
-  const { id } = await params;
+export default async function UserPage(props: { params: Params }) {
+  const { id } = await props.params;
 
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/users/${id}`

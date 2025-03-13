@@ -1,7 +1,6 @@
-import { User } from "@/app/page";
-import { Friend } from "@/user.interface";
-import users from "@/users.json";
 import { NextRequest, NextResponse } from "next/server";
+import { Friend, UserWithFriendsArrayIds } from "@/user.interface";
+import users from "@/users.json";
 
 export const GET = async (
   req: NextRequest,
@@ -16,7 +15,7 @@ export const GET = async (
     }, 2000);
   });
 
-  const user = (await promise) as User;
+  const user = (await promise) as UserWithFriendsArrayIds;
 
   if (!user) {
     throw new NextResponse(

@@ -2,6 +2,8 @@ import { UserCard } from "@/components/user-card";
 import { GetUsersResponse } from "@/user.interface";
 import Link from "next/link";
 
+export const dynamic = 'force-dynamic'
+
 export default async function UsersPage() {
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users`);
   const { users }: GetUsersResponse = await response.json();
