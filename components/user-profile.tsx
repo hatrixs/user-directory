@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Link } from "lucide-react";
+import Link from "next/link";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { UserWithFriendsObject } from "@/user.interface";

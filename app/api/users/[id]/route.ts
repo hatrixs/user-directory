@@ -8,14 +8,7 @@ export const GET = async (
 ) => {
   const { id: userId } = await context.params;
 
-  const promise = new Promise((res) => {
-    setTimeout(() => {
-      const user = users.find((user) => user.id === Number(userId));
-      res(user);
-    }, 2000);
-  });
-
-  const user = (await promise) as UserWithFriendsArrayIds;
+  const user = users.find((user) => user.id === Number(userId)) as UserWithFriendsArrayIds;
 
   if (!user) {
     throw new NextResponse(
