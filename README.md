@@ -33,7 +33,7 @@ The project is deployed and running at: [User Directory](https://user-directory-
 
 ## Process Reflections
 
-I recorded the entire development process, working mostly without AI assistance or autocompletion, which led to some interesting observations:
+I recorded the entire development process, which led to some interesting observations:
 
 [Watch the full development process video (time-lapse)](https://www.youtube.com/watch?v=UzPBdEIl6Ks)
 
